@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JUGITO</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@3.4.26/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="pantalla">
+    <div id="titulo"><h1>JUGITO.GAMES</h1></div>
+    <div id="newGame"> 
+      <h3>Nuevo Juego</h3>
+      <form id="formulario_Juego" @submit.prevent="registrarJuego">
+        <label id="Nombre">Nombre: </label><input type="text" 
+          id="nombre_Juego" v-model="nombre_Juego"> <br>
+        <label id="Plataforma">Plataforma: </label><select id="plataforma_Juego" 
+        v-model="plataforma_Juego" >
+          <option value="" disabled selected style="color: white;">PC | Playstation | Xbox</option>
+          <option value="PC">PC</option>
+          <option value="Playstation">Playstation</option>
+          <option value="Xbox">Xbox</option>
+        </select><br>
+        <label id="Estado">Estado: </label><select id="estado_Juego" v-model="estado_Juego">
+          <option value="" disabled selected style="color: white;">Pendiente | Jugando | Finalizado</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Jugando">Jugando</option>
+          <option value="Completado">Completado</option>
+        </select> <br>
+        <label id="Puntaje">Puntaje: </label><input type="text" 
+          id="puntaje_Juego" v-model="puntaje_Juego" placeholder="Número del 1 al 10"> <br>
+        <div id="Mensaje_Error" v-if="mensaje_Error" style="background-color: white; font-weight: bold;">
+          <p>{{ mensaje_Error }}</p>
+        </div>
+        <div id="boton">
+          <button type="submit" id="btn_Registrar_Juego">
+            Registrar Juego
+          </button>
+        </div>
+      </form>
+
+    </div>
+    
+    <div id="lista_Juegos">
+      <h3>Videojuegos </h3>
+      <div id="filtro">
+        <label>Nombre: </label><input type="text" name="filtro_Nombre" id="txt_Nombre"> 
+        <label>Plataforma: </label> <select v-model="filtro_Plataforma" id="select_Plataforma">
+          <option value="" selected>Todos</option>
+          <option value="PC">PC</option>
+          <option value="Playstation">Playstation</option>
+          <option value="Xbox">Xbox</option>
+        </select>
+        <label>Estado: </label> <select id="select_Estado" v-model="filtro_Estado">
+          <option value="" selected>Todos</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Jugando">Jugando</option>
+          <option value="Completado">Completado</option>
+        </select>
+      </div>
+      <div id="informacion">
+        <table id="tabla_Juegos">
+          <tr>
+            <th>Nombre</th>
+            <th>Plataforma</th>
+            <th>Esatdo</th>
+            <th>Puntaje</th>
+            <th>Info</th>
+          </tr>
+          <tr v-for="(juego, index) in juegosFiltrados" key="index">
+            <td>{{ juego.Nombre }}</td>
+            <td>{{ juego.Plataforma }}</td>
+            <td>{{ juego.Estado }}</td>
+            <td>{{ juego.Puntaje }}</td>
+            <td><button  @click=mostrar_Info(index)> + </button></td>
+          </tr>
+        </table>
+        <div id="#display_Info" class="box">
+          <ul v-if="info_Juego">
+            <li>Nombre: {{ info_Juego.Nombre }}</li>
+            <li>Plataforma: {{ info_Juego.Plataforma }}</li>
+            <li>Estado: {{ info_Juego.Estado }}</li>
+            <li>Puntaje: {{ info_Juego.Puntaje }}</li>
+          </ul>
+          <button type="reset" @click="limpiar_Info" style="align-items: center;">Limpiar info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
