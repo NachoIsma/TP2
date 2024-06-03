@@ -47,11 +47,11 @@ const app = Vue.createApp({
   computed:{
     juegosFiltrados() {
       return this.Juegos.filter(juego => {
-        const filtro_Nombre = this.filtro_Nombre.toLowerCase();
+        //const filtro_Nombre = this.filtro_Nombre.toLowerCase();
         const filtro_Plataforma = this.filtro_Plataforma.toLowerCase();
         const filtro_Estado = this.filtro_Estado.toLowerCase();
 
-        const nombre_Coincidente = filtro_Nombre === '' || juego.Nombre.toLowerCase().includes(filtro_Nombre);
+        //const nombre_Coincidente = filtro_Nombre === '' || juego.Nombre.toLowerCase().includes(filtro_Nombre);
         const plataforma_Coincidente= filtro_Plataforma === '' || juego.Plataforma.toLowerCase().includes(filtro_Plataforma);
         const estado_Coincidente= filtro_Estado === '' || juego.Estado.toLowerCase() === filtro_Estado;
 
