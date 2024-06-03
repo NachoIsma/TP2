@@ -1,13 +1,9 @@
 const app = Vue.createApp({
   data(){
     return{
-      nombre_Juego: '',
-      plataforma_Juego: '',
-      estado_Juego: '',
-      puntaje_Juego: '',
+      Juegos: [],
       info_Juego: '',
       mensaje_Error: "",
-      Juegos: [],
       filtro_Estado: '',
       filtro_Plataforma: '',
       filtro_Nombre: ''
