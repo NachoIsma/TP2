@@ -1,24 +1,24 @@
 tbody tr:nth-child(odd) {
-    background-color: #3358ff;
-  }
+  background-color: #3358ff;
+}
   
-  tbody tr:nth-child(even) {
-    background-color: #95b7e4;
-  }
+tbody tr:nth-child(even) {
+  background-color: #95b7e4;
+}
   
-  tbody tr {
-    background-image: url();
-  }
+tbody tr {
+  background-image: url();
+}
   
-  table {
-    border-collapse: collapse;
-    width: 50%;
-    background-color: #3385ff;
-  }
+table {
+  border-collapse: collapse;
+  width: 50%;
+  background-color: #3385ff;
+}
 
-  #pantalla{
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/85f06f80-f397-44e2-8f59-011e03c8fd38/dauyu3w-5bf401fe-fc6b-4a5e-8e29-c69959bddca9.png/v1/fill/w_1024,h_576,q_80,strp/space_invaders_wallpaper_by_wackix_dauyu3w-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvODVmMDZmODAtZjM5Ny00NGUyLThmNTktMDExZTAzYzhmZDM4XC9kYXV5dTN3LTViZjQwMWZlLWZjNmItNGE1ZS04ZTI5LWM2OTk1OWJkZGNhOS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.1bcsDOpmSdk5y57PFODETSK2B2CiL1ALBnmDbpMkC7Y);
-  }
+#pantalla{
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/85f06f80-f397-44e2-8f59-011e03c8fd38/dauyu3w-5bf401fe-fc6b-4a5e-8e29-c69959bddca9.png/v1/fill/w_1024,h_576,q_80,strp/space_invaders_wallpaper_by_wackix_dauyu3w-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvODVmMDZmODAtZjM5Ny00NGUyLThmNTktMDExZTAzYzhmZDM4XC9kYXV5dTN3LTViZjQwMWZlLWZjNmItNGE1ZS04ZTI5LWM2OTk1OWJkZGNhOS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.1bcsDOpmSdk5y57PFODETSK2B2CiL1ALBnmDbpMkC7Y);
+}
 
 #formulario_Juego{
   display: grid;
